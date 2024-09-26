@@ -58,6 +58,7 @@
     <Compile Include="Mathematics\Sequels.cs" />
     <Compile Include="Mathematics\Trigonometry.cs" />
     <Compile Include="Statistics\Average.cs" />
+    <Compile Include="Statistics\Deviation.cs" />
     <Compile Include="Statistics\Middle.cs" />
     <Compile Include="Statistics\Variance.cs" />
   </ItemGroup>
