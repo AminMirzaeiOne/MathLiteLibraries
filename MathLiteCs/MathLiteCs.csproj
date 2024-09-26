@@ -43,7 +43,9 @@
   <ItemGroup>
     <Compile Include="Algebra.cs" />
     <Compile Include="Collections.cs" />
+    <Compile Include="Derivative.cs" />
     <Compile Include="Function.cs" />
+    <Compile Include="Integral.cs" />
     <Compile Include="Numbers.cs" />
     <Compile Include="PowerRoot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
