@@ -51,6 +51,7 @@
     <Compile Include="PowerRoot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Radical.cs" />
+    <Compile Include="Sequels.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
