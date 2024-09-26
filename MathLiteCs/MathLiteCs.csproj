@@ -49,6 +49,7 @@
     <Compile Include="Geometry\Problem\Cube.cs" />
     <Compile Include="Geometry\Problem\Cylinder.cs" />
     <Compile Include="Geometry\Problem\Hexagon.cs" />
+    <Compile Include="Geometry\Problem\Octagon.cs" />
     <Compile Include="Geometry\Problem\Oval.cs" />
     <Compile Include="Geometry\Problem\Parallelogram.cs" />
     <Compile Include="Geometry\Problem\Pentagon.cs" />
