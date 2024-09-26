@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Geometry\Conversions.cs" />
     <Compile Include="Geometry\Coordinates.cs" />
+    <Compile Include="Geometry\Problem\Charter.cs" />
     <Compile Include="Geometry\Problem\Circle.cs" />
     <Compile Include="Geometry\Problem\Cone.cs" />
     <Compile Include="Geometry\Problem\Cube.cs" />
