@@ -57,6 +57,7 @@
     <Compile Include="Mathematics\Radical.cs" />
     <Compile Include="Mathematics\Sequels.cs" />
     <Compile Include="Mathematics\Trigonometry.cs" />
+    <Compile Include="Statistics\Average.cs" />
     <Compile Include="Statistics\Middle.cs" />
   </ItemGroup>
   <ItemGroup>
