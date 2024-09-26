@@ -66,6 +66,7 @@
     <Compile Include="Mathematics\Algebra.cs" />
     <Compile Include="Mathematics\Collections.cs" />
     <Compile Include="Mathematics\Derivative.cs" />
+    <Compile Include="Mathematics\Differential.cs" />
     <Compile Include="Mathematics\Function.cs" />
     <Compile Include="Mathematics\Graph.cs" />
     <Compile Include="Mathematics\Integral.cs" />
