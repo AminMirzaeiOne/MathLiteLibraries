@@ -49,6 +49,7 @@
     <Compile Include="Geometry\Problem\Cylinder.cs" />
     <Compile Include="Geometry\Problem\Oval.cs" />
     <Compile Include="Geometry\Problem\Parallelogram.cs" />
+    <Compile Include="Geometry\Problem\Pyramid.cs" />
     <Compile Include="Geometry\Problem\Rectangle.cs" />
     <Compile Include="Geometry\Problem\Rhombus.cs" />
     <Compile Include="Geometry\Problem\Spherical.cs" />
