@@ -65,7 +65,7 @@
     <Compile Include="Statistics\Variance.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Geometry\" />
+    <Folder Include="Geometry\Problem\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
