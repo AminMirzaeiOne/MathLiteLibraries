@@ -71,6 +71,7 @@
     <Compile Include="Mathematics\Graph.cs" />
     <Compile Include="Mathematics\Integral.cs" />
     <Compile Include="Mathematics\LinearAlgebra.cs" />
+    <Compile Include="Mathematics\Matrix.cs" />
     <Compile Include="Mathematics\Misc.cs" />
     <Compile Include="Mathematics\Numbers.cs" />
     <Compile Include="Mathematics\Numerical.cs" />
