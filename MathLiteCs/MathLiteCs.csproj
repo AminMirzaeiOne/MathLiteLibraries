@@ -77,6 +77,7 @@
     <Compile Include="Mathematics\Numerical.cs" />
     <Compile Include="Mathematics\Optimization.cs" />
     <Compile Include="Mathematics\PowerRoot.cs" />
+    <Compile Include="Mathematics\Topology.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Mathematics\Radical.cs" />
     <Compile Include="Mathematics\Sequels.cs" />
