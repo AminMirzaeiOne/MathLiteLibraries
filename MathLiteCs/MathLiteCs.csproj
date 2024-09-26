@@ -61,6 +61,7 @@
     <Compile Include="Statistics\Deviation.cs" />
     <Compile Include="Statistics\Ergodic.cs" />
     <Compile Include="Statistics\Middle.cs" />
+    <Compile Include="Statistics\Poisson.cs" />
     <Compile Include="Statistics\Variance.cs" />
   </ItemGroup>
   <ItemGroup>
