@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Geometry\Problem\Rectangle.cs" />
+    <Compile Include="Geometry\Problem\Rhombus.cs" />
     <Compile Include="Geometry\Problem\Square.cs" />
     <Compile Include="Geometry\Problem\Triangle.cs" />
     <Compile Include="Mathematics\Algebra.cs" />
