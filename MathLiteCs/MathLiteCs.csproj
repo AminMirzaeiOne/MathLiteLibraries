@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Geometry\Problem\Triangle.cs" />
     <Compile Include="Mathematics\Algebra.cs" />
     <Compile Include="Mathematics\Collections.cs" />
     <Compile Include="Mathematics\Derivative.cs" />
@@ -64,8 +65,6 @@
     <Compile Include="Statistics\Poisson.cs" />
     <Compile Include="Statistics\Variance.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Geometry\Problem\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
