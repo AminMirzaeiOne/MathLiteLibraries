@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Geometry\Problem\Circle.cs" />
     <Compile Include="Geometry\Problem\Parallelogram.cs" />
     <Compile Include="Geometry\Problem\Rectangle.cs" />
     <Compile Include="Geometry\Problem\Rhombus.cs" />
