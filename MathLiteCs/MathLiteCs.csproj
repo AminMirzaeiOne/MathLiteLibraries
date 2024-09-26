@@ -58,5 +58,8 @@
     <Compile Include="Sequels.cs" />
     <Compile Include="Trigonometry.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Mathematics\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
