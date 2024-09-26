@@ -41,26 +41,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Algebra.cs" />
-    <Compile Include="Collections.cs" />
-    <Compile Include="Derivative.cs" />
-    <Compile Include="Function.cs" />
-    <Compile Include="Graph.cs" />
-    <Compile Include="Integral.cs" />
-    <Compile Include="LinearAlgebra.cs" />
-    <Compile Include="Misc.cs" />
-    <Compile Include="Numbers.cs" />
-    <Compile Include="Numerical.cs" />
-    <Compile Include="Optimization.cs" />
-    <Compile Include="PowerRoot.cs" />
+    <Compile Include="Mathematics\Algebra.cs" />
+    <Compile Include="Mathematics\Collections.cs" />
+    <Compile Include="Mathematics\Derivative.cs" />
+    <Compile Include="Mathematics\Function.cs" />
+    <Compile Include="Mathematics\Graph.cs" />
+    <Compile Include="Mathematics\Integral.cs" />
+    <Compile Include="Mathematics\LinearAlgebra.cs" />
+    <Compile Include="Mathematics\Misc.cs" />
+    <Compile Include="Mathematics\Numbers.cs" />
+    <Compile Include="Mathematics\Numerical.cs" />
+    <Compile Include="Mathematics\Optimization.cs" />
+    <Compile Include="Mathematics\PowerRoot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Radical.cs" />
-    <Compile Include="Sequels.cs" />
-    <Compile Include="Trigonometry.cs" />
+    <Compile Include="Mathematics\Radical.cs" />
+    <Compile Include="Mathematics\Sequels.cs" />
+    <Compile Include="Mathematics\Trigonometry.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Geometry\" />
-    <Folder Include="Mathematics\" />
     <Folder Include="Statistics\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
