@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Geometry\Conversions.cs" />
     <Compile Include="Geometry\Coordinates.cs" />
     <Compile Include="Geometry\Problem\Circle.cs" />
     <Compile Include="Geometry\Problem\Oval.cs" />
