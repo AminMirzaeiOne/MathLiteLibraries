@@ -466,6 +466,7 @@ namespace MathLiteCs
 
         public static double Sinh(double x, int terms)
         {
+            
             double result = 0;
             double term = x;
             int factorial = 1;
@@ -477,6 +478,27 @@ namespace MathLiteCs
             }
             return result;
         }
+
+        public class DivisionResult
+        {
+            public int Quotient { get; set; }
+            public int Remainder { get; set; }
+        }
+
+        public static MathLiteCs.MathLite.DivisionResult DivRem(int dividend, int divisor)
+        {
+            if (divisor == 0)
+            {
+                throw new System.DivideByZeroException();
+            }
+
+            return new MathLiteCs.MathLite.DivisionResult
+            {
+                Quotient = dividend / divisor,
+                Remainder = dividend % divisor
+            };
+        }
+
 
 
     }
