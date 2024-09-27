@@ -307,6 +307,15 @@
         Return theta
     End Function
 
+    Public Function Sign(number As Integer) As Integer
+        If number > 0 Then
+            Return 1
+        ElseIf number < 0 Then
+            Return -1
+        Else
+            Return 0
+        End If
+    End Function
 
 
 
