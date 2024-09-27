@@ -124,10 +124,39 @@ namespace MathLiteCs
             return Math.Pow(number, 1.0 / n);
         }
 
+        public static short Abs(short value)
+        {
+            return System.Convert.ToInt16(value < 0 ? -value : value);
+        }
+
+        public static int Abs(int value)
+        {
+            return value < 0 ? -value : value;
+        }
+
+        public static long Abs(long value)
+        {
+            return value < 0 ? -value : value;
+        }
+
+        public static decimal Abs(decimal value)
+        {
+            return value < 0 ? -value : value;
+        }
+
+        public static float Abs(float value)
+        {
+            return value < 0 ? -value : value;
+        }
 
         public static double Abs(double value)
         {
             return value < 0 ? -value : value;
+        }
+
+        public static sbyte Abs(sbyte value)
+        {
+            return System.Convert.ToSByte(value < 0 ? -value : value);
         }
 
         public static long Round(double value)
@@ -192,7 +221,7 @@ namespace MathLiteCs
             return result;
         }
 
-        public static double Pow(double baseNumber, double exponent,MathLiteCs.MathLite.PowerMethod method)
+        public static double Pow(double baseNumber, double exponent, MathLiteCs.MathLite.PowerMethod method)
         {
             double get = 0;
             if (method == PowerMethod.Loop)
