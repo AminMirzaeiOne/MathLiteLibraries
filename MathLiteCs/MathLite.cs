@@ -253,6 +253,7 @@ namespace MathLiteCs
 
         public static double Cos(double x)
         {
+            
             double result = 1.0;
             double term = 1.0;
             int sign = -1;
@@ -261,6 +262,21 @@ namespace MathLiteCs
                 term *= sign * x * x / (i * (i - 1));
                 sign = -sign;
                 result += term;
+            }
+            return result;
+        }
+
+        public static double Sin(double x)
+        {
+            
+            double result = x;
+            double term = x;
+            int sign = -1;
+            for (int i = 3; MathLite.Abs(term) > 1e-10; i += 2)
+            {
+                term *= -x * x / ((i - 1) * i);
+                result += term;
+                sign *= -1;
             }
             return result;
         }
