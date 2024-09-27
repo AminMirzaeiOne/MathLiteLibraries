@@ -9,6 +9,7 @@ namespace MathLiteCs
     public struct Constants
     {
         public const double PI = 3.1415926535897931;
-        public const double Euler = 2.71828;
+        public const double Euler = 2.718281828459045;
+        public const double Avogadro = 6.02214076e23;
     }
 }
