@@ -8,5 +8,10 @@ namespace MathLiteCpp {
 			Newton, Binary
 		};
 
+		enum PowerMethod
+		{
+			Loop, Returned
+		};
+
 	};
 }
