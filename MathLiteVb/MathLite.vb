@@ -226,6 +226,14 @@
         Return result
     End Function
 
+    Public Function Acos(x As Double) As Double
+        If x < -1 OrElse x > 1 Then Throw New ArgumentOutOfRangeException("x must be between -1 and 1")
+
+        Dim result As Double = MathLiteVb.Constants.PI / 2 - 2 * MathLite.Atan(x / (1 + MathLite.Sqrt(1 - x * x)))
+        Return result
+    End Function
+
+
 
 
 
