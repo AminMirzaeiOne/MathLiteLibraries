@@ -158,6 +158,22 @@
     End Function
 
 
+    Public Function Pow(baseNumber As Double, exponent As Double) As Double
+        Dim result = 1.0
+        If exponent >= 0 Then
+            For i As Integer = 0 To exponent - 1
+                result *= baseNumber
+            Next
+        Else
+            For i As Integer = 0 To exponent + 1 Step -1
+                result /= baseNumber
+            Next
+        End If
+        Return result
+    End Function
+
+
+
 
 
 
