@@ -7,5 +7,6 @@
     Public Const Gravitational As Double = 0.000000000066743
     Public Const Gas As Double = 8.314462618
     Public Const Aperys As Double = 1.202056903159594
+    Public Const GoldenRatio As Double = 1.6180339887
 
 End Structure
