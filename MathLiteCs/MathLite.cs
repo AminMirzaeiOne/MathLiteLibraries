@@ -511,9 +511,26 @@ namespace MathLiteCs
             {
                 return double.NaN;
             }
-
             double quotient = MathLite.Round(x / y);
             return x - y * quotient;
+        }
+
+        public static double Log(double x, double terms = 10)
+        {
+            if (x <= 0)
+            {
+                throw new System.ArgumentException("x must be positive");
+            }
+
+            double z = x - 1;
+
+            double result = 0;
+            for (int i = 1; i <= terms; i++)
+            {
+                result += MathLite.Pow(-1, i + 1) * MathLite.Pow(z, i) / i;
+            }
+
+            return result;
         }
 
 
