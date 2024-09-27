@@ -14,5 +14,6 @@ namespace MathLiteCs
         public const double Planck = 6.62607015e-34;
         public const double SpeedOfLight = 299792458;
         public const double Gravitational = 6.67430e-11;
+        public const double Gas = 8.314462618;
     }
 }
