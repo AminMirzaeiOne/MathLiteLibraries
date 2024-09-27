@@ -457,6 +457,12 @@ namespace MathLiteCs
             }
         }
 
+        public static double Sinh(double x)
+        {
+            double exp_x = MathLite.Exp(x);
+            double exp_neg_x = MathLite.Exp(-x);
+            return (exp_x - exp_neg_x) / 2;
+        }
 
 
     }
