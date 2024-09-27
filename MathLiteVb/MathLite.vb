@@ -194,6 +194,21 @@
         Return resulte
     End Function
 
+    Public Function Cos(x As Double) As Double
+
+        Dim result = 1.0
+        Dim term = 1.0
+        Dim sign = -1
+        Dim i = 2
+
+        While MathLite.Abs(term) > 0.0000000001
+            term *= sign * x * x / (i * (i - 1))
+            sign = -sign
+            result += term
+            i += 2
+        End While
+        Return result
+    End Function
 
 
 
