@@ -18,5 +18,6 @@ namespace MathLiteCs
         public const double Aperys = 1.202056903159594;
         public const double GoldenRatio = 1.6180339887;
         public const double EulerMascheroni = 0.5772156649;
+        public const double MeisselMertens = 0.2614972128;
     }
 }
