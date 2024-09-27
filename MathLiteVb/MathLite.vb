@@ -469,6 +469,26 @@
         Return MathLite.Log(x) / MathLite.Log(10)
     End Function
 
+    Public Function Log10(x As Double, Optional tolerance As Double = 0.0000000001) As Double
+        If x <= 0 Then
+            Throw New ArgumentException("x must be positive")
+        End If
+
+        Dim guess = 1.0
+        While True
+            Dim f As Double = MathLite.Pow(10, guess) - x
+            Dim fPrime As Double = MathLite.Pow(10, guess) * MathLite.Log(10)
+            Dim newGuess = guess - f / fPrime
+
+            If MathLite.Abs(newGuess - guess) < tolerance Then
+                Return newGuess
+            End If
+
+            guess = newGuess
+        End While
+    End Function
+
+
 
 
 End Module
