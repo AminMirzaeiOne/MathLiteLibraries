@@ -399,7 +399,19 @@ namespace MathLiteCs
         }
 
 
-
+        public static double Tanh(double x, int terms)
+        {
+            double result = 0;
+            double term = x;
+            int sign = 1;
+            for (int i = 1; i <= terms; i++)
+            {
+                result += term;
+                sign *= -1;
+                term *= x * x * (2 * i - 1) / (2 * i + 1);
+            }
+            return result;
+        }
 
 
     }
