@@ -29,6 +29,23 @@
     End Function
 
 
+    Public Function Minimum(ParamArray numbers As Integer()) As Integer
+        If numbers Is Nothing OrElse numbers.Length = 0 Then
+            Throw New ArgumentException("Array cannot be null or empty.")
+        End If
+
+        Dim min As Integer = numbers(0)
+        For i As Integer = 1 To numbers.Length - 1
+            If numbers(i) < min Then
+                min = numbers(i)
+            End If
+        Next
+
+        Return min
+    End Function
+
+
+
 
 
 
