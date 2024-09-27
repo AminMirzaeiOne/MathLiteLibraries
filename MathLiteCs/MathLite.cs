@@ -139,5 +139,20 @@ namespace MathLiteCs
             }
             return integral - sign;
         }
+
+        public static long Ceiling(double value)
+        {
+            long integralPart = (long)value;
+            double fractionalPart = value - integralPart;
+
+            if (fractionalPart > 0)
+            {
+                return integralPart + 1;
+            }
+            else
+            {
+                return integralPart;
+            }
+        }
     }
 }
