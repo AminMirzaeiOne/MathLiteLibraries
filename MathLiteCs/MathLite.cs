@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,6 +9,10 @@ namespace MathLiteCs
 {
     public static class MathLite
     {
+        public enum RootMethod
+        {
+            Newton, Binary
+        }
         public static int Max(params int[] numbers)
         {
             if (numbers == null || numbers.Length == 0)
@@ -44,6 +49,62 @@ namespace MathLiteCs
             }
 
             return min;
+
+        }
+
+        public static double Sqrt(double x)
+        {
+            if (x < 0)
+            {
+                throw new System.ArgumentException("Cannot calculate square root of a negative number.");
+            }
+
+            double y = x / 2;
+            double epsilon = 1e-15;
+
+            while (Math.Abs(y * y - x) > epsilon)
+            {
+                y = (y + x / y) / 2;
+            }
+
+            return y;
+        }
+
+        public static double Sqrt(double x, MathLiteCs.MathLite.RootMethod method)
+        {
+            double get = 0;
+            if (method == RootMethod.Newton)
+            {
+                get = MathLiteCs.MathLite.Sqrt(x);
+            }
+            else
+            {
+                if (x < 0)
+                {
+                    throw new System.ArgumentException("Cannot calculate square root of a negative number.");
+                }
+
+                double left = 0, right = x;
+                double epsilon = 1e-15;
+
+                while (right - left > epsilon)
+                {
+                    double mid = (left + right) / 2;
+                    if (mid * mid > x)
+                    {
+                        right = mid;
+                    }
+                    else
+                    {
+                        left = mid;
+                    }
+                }
+
+                get = left;
+
+            }
+
+            return get;
 
         }
     }
