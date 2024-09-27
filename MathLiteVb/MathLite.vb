@@ -317,6 +317,11 @@
         End If
     End Function
 
+    Public Function Tan(angle As Double) As Double
+        Return MathLite.Sin(angle) / MathLite.Cos(angle)
+    End Function
+
+
 
 
 End Module
