@@ -261,6 +261,20 @@
         Return (MathLite.Exp(x) + MathLite.Exp(-x)) / 2
     End Function
 
+    Public Function Exp(x As Double) As Double
+        Dim result = 1.0
+        Dim term = 1.0
+        Dim i = 1
+
+        While MathLite.Abs(term) > 0.0000000001
+            term *= x / i
+            result += term
+            i += 1
+        End While
+        Return result
+
+    End Function
+
 
 
 
