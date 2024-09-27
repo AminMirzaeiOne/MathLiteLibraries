@@ -352,6 +352,19 @@
         Next
     End Sub
 
+    Public Function GetTanh(x As Double) As Double
+        If x < _xValues(0) Then Return MathLite.Tanh(x)
+        If x > _xValues(_xValues.Length - 1) Then Return MathLite.Tanh(x)
+
+        Dim index = CInt((x - _xValues(0)) / _step)
+        Dim t As Double = (x - _xValues(index)) / _step
+
+        Return (1 - t) * _tanhValues(index) + t * _tanhValues(index + 1)
+    End Function
+
+
+
+
 
 
 End Module
