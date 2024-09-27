@@ -434,6 +434,33 @@
         Return result
     End Function
 
+    Public Function Log(x As Double, Optional tolerance As Double = 0.0000000001, Optional NewtonRaphson As Boolean = False) As Double
+        Dim result As Double = 0
+        If NewtonRaphson = False Then
+            result = MathLite.Log(x, tolerance)
+        Else
+            If x <= 0 Then
+                Throw New ArgumentException("x must be positive")
+            End If
+
+            Dim guess = 1.0
+            While True
+                Dim f As Double = MathLite.Exp(guess) - x
+                Dim fPrime As Double = MathLite.Exp(guess)
+                Dim newGuess = guess - f / fPrime
+
+                If MathLite.Abs(newGuess - guess) < tolerance Then
+                    result = newGuess
+                End If
+
+                guess = newGuess
+            End While
+        End If
+
+        Return result
+
+    End Function
+
 
 
 
