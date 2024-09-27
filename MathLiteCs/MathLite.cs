@@ -284,7 +284,7 @@ namespace MathLiteCs
         public static double Acos(double x)
         {
             if (x < -1 || x > 1)
-                throw new ArgumentOutOfRangeException("x must be between -1 and 1");
+                throw new System.ArgumentOutOfRangeException("x must be between -1 and 1");
 
             double result = MathLiteCs.Constants.PI / 2 - 2 * MathLite.Atan(x / (1 + MathLite.Sqrt(1 - x * x)));
             return result;
@@ -303,6 +303,17 @@ namespace MathLiteCs
             }
             return result;
         }
+
+        public static double Asin(double x)
+        {
+            if (x < -1 || x > 1)
+                throw new System.ArgumentOutOfRangeException("x must be between -1 and 1");
+
+            double result = 2 * MathLite.Atan(x / (1 + MathLite.Sqrt(1 - x * x)));
+            return result;
+        }
+
+
 
 
     }
