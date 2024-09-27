@@ -390,6 +390,13 @@
         Return result
     End Function
 
+    Public Class DivisionResult
+        Public Property Quotient As Integer
+        Public Property Remainder As Integer
+    End Class
+
+
+
 
 
 
