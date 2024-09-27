@@ -9,5 +9,6 @@
     Public Const Aperys As Double = 1.202056903159594
     Public Const GoldenRatio As Double = 1.6180339887
     Public Const EulerMascheroni As Double = 0.5772156649
+    Public Const MeisselMertens As Double = 0.2614972128
 
 End Structure
