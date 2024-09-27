@@ -173,6 +173,26 @@
     End Function
 
 
+    Public Function Pow(baseNumber As Double, exponent As Double, method As MathLite.PowerMethod) As Double
+        Dim resulte As Double = 0
+        If method = MathLite.PowerMethod.LoopMethod Then
+            resulte = MathLiteVb.MathLite.Pow(baseNumber, exponent)
+        Else
+            If exponent = 0 Then
+                resulte = 1.0
+            End If
+            If exponent < 0 Then
+                resulte = 1.0 / MathLite.Pow(baseNumber, -exponent)
+            End If
+            If exponent Mod 2 = 0 Then
+                Dim temp As Double = MathLite.Pow(baseNumber, exponent / 2)
+                resulte = temp * temp
+            Else
+                resulte = baseNumber * MathLite.Pow(baseNumber, exponent - 1)
+            End If
+        End If
+        Return resulte
+    End Function
 
 
 
