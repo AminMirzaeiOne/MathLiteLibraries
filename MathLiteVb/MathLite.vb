@@ -363,6 +363,13 @@
     End Function
 
 
+    Public Function Truncate(number As Double) As Double
+        If number >= 0 Then
+            Return MathLite.Floor(number)
+        Else
+            Return MathLite.Ceiling(number)
+        End If
+    End Function
 
 
 
