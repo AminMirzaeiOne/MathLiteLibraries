@@ -354,7 +354,7 @@ namespace MathLiteCs
             return result;
         }
 
-        public static double MyAtan2(double y, double x)
+        public static double Atan2(double y, double x)
         {
             if (x == 0)
             {
