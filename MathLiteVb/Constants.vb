@@ -3,5 +3,6 @@
     Public Const Euler As Double = 2.7182818284590451
     Public Const Avogadro As Double = 6.02214076E+23
     Public Const Planck As Double = 6.62607015E-34
+    Public Const SpeedOfLight As Double = 299792458
 
 End Structure
