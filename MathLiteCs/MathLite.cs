@@ -464,6 +464,20 @@ namespace MathLiteCs
             return (exp_x - exp_neg_x) / 2;
         }
 
+        public static double Sinh(double x, int terms)
+        {
+            double result = 0;
+            double term = x;
+            int factorial = 1;
+            for (int i = 1; i <= terms; i++)
+            {
+                result += term;
+                factorial *= (2 * i) * (2 * i + 1);
+                term = (x * x * term) / factorial;
+            }
+            return result;
+        }
+
 
     }
 }
