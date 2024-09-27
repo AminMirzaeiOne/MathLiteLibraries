@@ -328,5 +328,18 @@
     End Function
 
 
+    Public Function Tanh(x As Double, terms As Integer) As Double
+
+        Dim result As Double = 0
+        Dim term = x
+        Dim sign = 1
+        For i = 1 To terms
+            result += term
+            sign *= -1
+            term *= x * x * (2 * i - 1) / (2 * i + 1)
+        Next
+        Return result
+    End Function
+
 
 End Module
