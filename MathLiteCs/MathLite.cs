@@ -344,9 +344,32 @@ namespace MathLiteCs
                 b /= 10;
                 multiplier *= 10;
             }
-
+            
             return result;
         }
+
+        public static double MyAtan2(double y, double x)
+        {
+            if (x == 0)
+            {
+                if (y > 0) return MathLiteCs.Constants.PI / 2;
+                if (y < 0) return -MathLiteCs.Constants.PI / 2;
+                return double.NaN;
+            }
+
+            double theta = MathLite.Atan(y / x);
+            if (x < 0)
+            {
+                theta += MathLiteCs.Constants.PI;
+            }
+            else if (y < 0 && x > 0)
+            {
+                theta += 2 * MathLiteCs.Constants.PI;
+            }
+            return theta;
+        }
+
+
 
 
 
