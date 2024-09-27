@@ -64,7 +64,7 @@
     <Compile Include="Geometry\Problem\Triangle.cs" />
     <Compile Include="Geometry\Spatial.cs" />
     <Compile Include="Geometry\Theorems.cs" />
-    <Compile Include="Math.cs" />
+    <Compile Include="MathLite.cs" />
     <Compile Include="Mathematics\Algebra.cs" />
     <Compile Include="Mathematics\Collections.cs" />
     <Compile Include="Mathematics\Derivative.cs" />
