@@ -107,5 +107,15 @@ namespace MathLiteCs
             return get;
 
         }
+
+        public static double Root(double number, double n)
+        {
+            if (number < 0 && n % 2 == 0)
+            {
+                throw new System.ArgumentException("Cannot calculate even root of a negative number.");
+            }
+
+            return Math.Pow(number, 1.0 / n);
+        }
     }
 }
