@@ -461,6 +461,13 @@
 
     End Function
 
+    Public Function Log10(x As Double) As Double
+        If x <= 0 Then
+            Throw New ArgumentException("x must be positive")
+        End If
+
+        Return MathLite.Log(x) / MathLite.Log(10)
+    End Function
 
 
 
