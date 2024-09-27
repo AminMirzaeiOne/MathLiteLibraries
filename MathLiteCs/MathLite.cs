@@ -306,6 +306,7 @@ namespace MathLiteCs
 
         public static double Asin(double x)
         {
+            
             if (x < -1 || x > 1)
                 throw new System.ArgumentOutOfRangeException("x must be between -1 and 1");
 
@@ -313,6 +314,22 @@ namespace MathLiteCs
             return result;
         }
 
+        public static double Cosh(double x)
+        {
+            return (MathLite.Exp(x) + MathLite.Exp(-x)) / 2;
+        }
+
+        public static double Exp(double x)
+        {
+            double result = 1.0;
+            double term = 1.0;
+            for (int i = 1; MathLite.Abs(term) > 1e-10; i++)
+            {
+                term *= x / i;
+                result += term;
+            }
+            return result;
+        }
 
 
 
