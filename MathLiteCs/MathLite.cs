@@ -253,6 +253,7 @@ namespace MathLiteCs
 
         public static double Cos(double x)
         {
+            Math.PI
             double result = 1.0;
             double term = 1.0;
             int sign = -1;
