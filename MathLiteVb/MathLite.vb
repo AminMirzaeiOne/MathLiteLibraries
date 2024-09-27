@@ -1,4 +1,6 @@
-﻿Module MathLite
+﻿Imports System.Threading
+
+Module MathLite
     Public Enum RootMethod
         Newton
         Binary
@@ -487,6 +489,25 @@
             guess = newGuess
         End While
     End Function
+
+    Public Function Log(x As Double) As Double
+        If x <= 0 Then
+            Throw New System.ArgumentException("x must be positive")
+        End If
+
+        Dim z = x - 1
+        Dim result As Double = 0
+        Dim term = z
+        Dim i = 1
+
+        While MathLite.Abs(term) > 0.0000000001
+            result += term
+            term *= -z / Interlocked.Increment(i)
+        End While
+
+        Return result
+    End Function
+
 
 
 
