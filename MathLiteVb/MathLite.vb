@@ -44,6 +44,21 @@
         Return min
     End Function
 
+    Public Function Sqrt(x As Double) As Double
+        If x < 0 Then
+            Throw New System.ArgumentException("Cannot calculate square root of a negative number.")
+        End If
+
+        Dim y As Double = x / 2
+        Dim epsilon As Double = 0.000000000000001
+
+        While Math.Abs(y * y - x) > epsilon
+            y = (y + x / y) / 2
+        End While
+
+        Return y
+    End Function
+
 
 
 
