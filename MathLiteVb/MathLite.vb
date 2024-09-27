@@ -321,6 +321,11 @@
         Return MathLite.Sin(angle) / MathLite.Cos(angle)
     End Function
 
+    Public Function Tanh(x As Double) As Double
+        Dim exp_x As Double = MathLite.Exp(x)
+        Dim exp_neg_x As Double = MathLite.Exp(-x)
+        Return (exp_x - exp_neg_x) / (exp_x + exp_neg_x)
+    End Function
 
 
 
