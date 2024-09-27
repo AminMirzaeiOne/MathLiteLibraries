@@ -377,6 +377,21 @@
         Return (exp_x - exp_neg_x) / 2
     End Function
 
+    Public Function Sinh(x As Double, terms As Integer) As Double
+
+        Dim result As Double = 0
+        Dim term = x
+        Dim factorial = 1
+        For i = 1 To terms
+            result += term
+            factorial *= 2 * i * (2 * i + 1)
+            term = x * x * term / factorial
+        Next
+        Return result
+    End Function
+
+
+
 
 
 End Module
