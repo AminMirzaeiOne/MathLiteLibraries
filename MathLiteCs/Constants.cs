@@ -22,6 +22,8 @@ namespace MathLiteCs
         public const double Gamma = 0.5772156649;
         public const double CatalanConstant = 0.915965594177219;
         public const double GoldenAngle = 137.508;
+        public const double CauchyConstant = 0.6601618158;
+
 
     }
 }
