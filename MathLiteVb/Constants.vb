@@ -13,5 +13,5 @@
     Public Const Gamma As Double = 0.5772156649
     Public Const Catalan As Double = 0.915965594177219
     Public Const GoldenAngle As Double = 137.508
-
+    Public Const Cauchy As Double = 0.6601618158
 End Structure
