@@ -487,6 +487,7 @@ namespace MathLiteCs
 
         public static MathLiteCs.MathLite.DivisionResult DivRem(int dividend, int divisor)
         {
+            
             if (divisor == 0)
             {
                 throw new System.DivideByZeroException();
@@ -497,6 +498,22 @@ namespace MathLiteCs
                 Quotient = dividend / divisor,
                 Remainder = dividend % divisor
             };
+        }
+
+        public static double IEEERemainder(double x, double y)
+        {
+            if (double.IsNaN(x) || double.IsNaN(y))
+            {
+                return double.NaN;
+            }
+
+            if (y == 0)
+            {
+                return double.NaN;
+            }
+
+            double quotient = MathLite.Round(x / y);
+            return x - y * quotient;
         }
 
 
