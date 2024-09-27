@@ -5,9 +5,12 @@
 
 int main()
 {
-    std::cout << "Hello World!\n";
-    MathLiteCpp::MathLite::
-    
+	std::cout << "Hello World!\n";
+	int arr[] = { 3, 7, 2, 9, 0 };
+	int size = sizeof(arr) / sizeof(arr[0]);
+	std::cout << MathLiteCpp::MathLite::Min(arr,size) << std::endl;
+	getchar();
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

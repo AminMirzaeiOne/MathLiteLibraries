@@ -1,5 +1,7 @@
 #include <iostream>
 #include <climits>
+#include <vector>
+#include <stdexcept>
 #pragma once
 
 namespace MathLiteCpp {
@@ -19,19 +21,35 @@ namespace MathLiteCpp {
 	private: static double _tanhValues[];
 	private: static double _step;
 
-		   int max(int* numbers, int size) {
-			   if (numbers == nullptr || size == 0) {
-				   throw std::invalid_argument("Array cannot be null or empty.");
-			   }
+	public:
 
-			   int max_value = INT_MIN;
-			   for (int i = 0; i < size; ++i) {
-				   if (numbers[i] > max_value) {
-					   max_value = numbers[i];
-				   }
-			   }
-			   return max_value;
-		   }
+		static int Max(int* numbers, int size) {
+			if (numbers == nullptr || size == 0) {
+				throw std::invalid_argument("Array cannot be null or empty.");
+			}
+
+			int max_value = numbers[0];
+			for (int i = 0; i < size; ++i) {
+				if (numbers[i] > max_value) {
+					max_value = numbers[i];
+				}
+			}
+			return max_value;
+		}
+
+		static int Min(int* numbers, int size) {
+			if (numbers == nullptr || size == 0) {
+				throw std::invalid_argument("Array cannot be null or empty.");
+			}
+
+			int min_value = numbers[0];
+			for (int i = 0; i < size; ++i) {
+				if (numbers[i] < min_value) {
+					min_value = numbers[i];
+				}
+			}
+			return min_value;
+		}
 
 
 
