@@ -10,5 +10,6 @@
     Public Const GoldenRatio As Double = 1.6180339887
     Public Const EulerMascheroni As Double = 0.5772156649
     Public Const MeisselMertens As Double = 0.2614972128
+    Public Const Gamma As Double = 0.5772156649
 
 End Structure
