@@ -59,6 +59,37 @@
         Return y
     End Function
 
+    Public Function Sqrt(x As Double, method As MathLiteVb.MathLite.RootMethod) As Double
+        Dim result As Double = 0
+
+        If method = MathLiteVb.MathLite.RootMethod.Newton Then
+            result = MathLiteVb.MathLite.Sqrt(x)
+        Else
+            If x < 0 Then
+                Throw New System.ArgumentException("Cannot calculate square root of a negative number.")
+            End If
+
+            Dim left As Double = 0
+            Dim right As Double = x
+            Dim epsilon As Double = 0.000000000000001
+
+            While right - left > epsilon
+                Dim mid As Double = (left + right) / 2
+                If mid * mid > x Then
+                    right = mid
+                Else
+                    left = mid
+                End If
+            End While
+
+            result = left
+        End If
+
+        Return result
+    End Function
+
+
+
 
 
 
