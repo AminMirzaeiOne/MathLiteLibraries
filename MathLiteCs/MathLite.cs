@@ -434,14 +434,16 @@ namespace MathLiteCs
 
         public static double GetTanh(double x)
         {
-            if (x < _xValues[0]) return Math.Tanh(x);
-            if (x > _xValues[_xValues.Length - 1]) return Math.Tanh(x);
+            if (x < _xValues[0]) return MathLite.Tanh(x);
+            if (x > _xValues[_xValues.Length - 1]) return MathLite.Tanh(x);
 
             int index = (int)((x - _xValues[0]) / _step);
             double t = (x - _xValues[index]) / _step;
 
             return (1 - t) * _tanhValues[index] + t * _tanhValues[index + 1];
         }
+
+
 
 
     }
