@@ -257,6 +257,11 @@
     End Function
 
 
+    Public Function Cosh(x As Double) As Double
+        Return (MathLite.Exp(x) + MathLite.Exp(-x)) / 2
+    End Function
+
+
 
 
 End Module
