@@ -19,6 +19,12 @@ namespace MathLiteCs
         {
             Loop, Returned
         }
+
+        private static double[] _xValues;
+        private static double[] _tanhValues;
+        private static double _step;
+
+
         public static int Max(params int[] numbers)
         {
             if (numbers == null || numbers.Length == 0)
@@ -411,6 +417,30 @@ namespace MathLiteCs
                 term *= x * x * (2 * i - 1) / (2 * i + 1);
             }
             return result;
+        }
+
+        public static void TanhLookupTable(double minX, double maxX, int numPoints)
+        {
+            MathLite._step = (maxX - minX) / (numPoints - 1);
+            MathLite._xValues = new double[numPoints];
+            MathLite._tanhValues = new double[numPoints];
+
+            for (int i = 0; i < numPoints; i++)
+            {
+                _xValues[i] = minX + i * _step;
+                _tanhValues[i] = MathLite.Tanh(_xValues[i]);
+            }
+        }
+
+        public static double GetTanh(double x)
+        {
+            if (x < _xValues[0]) return Math.Tanh(x);
+            if (x > _xValues[_xValues.Length - 1]) return Math.Tanh(x);
+
+            int index = (int)((x - _xValues[0]) / _step);
+            double t = (x - _xValues[index]) / _step;
+
+            return (1 - t) * _tanhValues[index] + t * _tanhValues[index + 1];
         }
 
 
