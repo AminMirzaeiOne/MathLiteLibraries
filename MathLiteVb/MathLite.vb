@@ -408,6 +408,17 @@
             }
     End Function
 
+    Public Function IEEERemainder(x As Double, y As Double) As Double
+        If Double.IsNaN(x) OrElse Double.IsNaN(y) Then
+            Return Double.NaN
+        End If
+
+        If y = 0 Then
+            Return Double.NaN
+        End If
+        Dim quotient As Double = MathLite.Round(x / y)
+        Return x - y * quotient
+    End Function
 
 
 
