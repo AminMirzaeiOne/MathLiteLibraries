@@ -12,7 +12,7 @@ namespace MathLiteCs
         {
             if (numbers == null || numbers.Length == 0)
             {
-                throw new ArgumentException("Array cannot be null or empty.");
+                throw new System.ArgumentException("Array cannot be null or empty.");
             }
 
             int max = numbers[0];
@@ -25,6 +25,26 @@ namespace MathLiteCs
             }
 
             return max;
+        }
+
+        public static int Min(params int[] numbers)
+        {
+            if (numbers == null || numbers.Length == 0)
+            {
+                throw new System.ArgumentException("Array cannot be null or empty.");
+            }
+
+            int min = numbers[0];
+            for (int i = 1; i < numbers.Length; i++)
+            {
+                if (numbers[i] < min)
+                {
+                    min = numbers[i];
+                }
+            }
+
+            return min;
+
         }
     }
 }
