@@ -11,5 +11,6 @@
     Public Const EulerMascheroni As Double = 0.5772156649
     Public Const MeisselMertens As Double = 0.2614972128
     Public Const Gamma As Double = 0.5772156649
+    Public Const Catalan As Double = 0.915965594177219
 
 End Structure
