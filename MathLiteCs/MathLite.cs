@@ -386,6 +386,11 @@ namespace MathLiteCs
             }
         }
 
+        public static double Tan(double angle)
+        {
+            return MathLite.Sin(angle) / MathLite.Cos(angle);
+        }
+
 
 
 
