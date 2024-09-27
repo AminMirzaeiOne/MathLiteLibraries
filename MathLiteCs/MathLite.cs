@@ -14,6 +14,11 @@ namespace MathLiteCs
         {
             Newton, Binary
         }
+
+        public enum PowerMethod
+        {
+            Loop, Returned
+        }
         public static int Max(params int[] numbers)
         {
             if (numbers == null || numbers.Length == 0)
@@ -166,5 +171,7 @@ namespace MathLiteCs
                 return (long)value - 1;
             }
         }
+
+
     }
 }
