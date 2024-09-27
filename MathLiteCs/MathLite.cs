@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -62,7 +63,7 @@ namespace MathLiteCs
             double y = x / 2;
             double epsilon = 1e-15;
 
-            while (Math.Abs(y * y - x) > epsilon)
+            while (MathLite.Abs(y * y - x) > epsilon)
             {
                 y = (y + x / y) / 2;
             }
@@ -119,9 +120,24 @@ namespace MathLiteCs
         }
 
 
-        public static long Abs(long value)
+        public static double Abs(double value)
         {
             return value < 0 ? -value : value;
+        }
+
+        public static long Round(double value)
+        {
+            ulong signMask = 0x8000000000000000;
+
+            int sign = (int)((ulong)value & signMask) >> 63;
+
+            int integral = (int)value;
+            double fractional = value - integral;
+            if (fractional >= 0.5)
+            {
+                integral += 1;
+            }
+            return integral - sign;
         }
     }
 }
