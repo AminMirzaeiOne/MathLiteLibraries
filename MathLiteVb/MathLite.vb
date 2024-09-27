@@ -276,6 +276,21 @@
     End Function
 
 
+    Public Function BigMul(a As Integer, b As Integer) As Long
+        Dim result As Long = 0
+        Dim multiplier = 1
+
+        While b <> 0
+            Dim lastDigit = b Mod 10
+            result += a * lastDigit * multiplier
+            b /= 10
+            multiplier *= 10
+        End While
+
+        Return result
+    End Function
+
+
 
 
 End Module
