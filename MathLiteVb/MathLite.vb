@@ -124,6 +124,20 @@
         Return System.Convert.ToSByte(If(value < 0, -value, value))
     End Function
 
+    Public Function Round(value As Double) As Long
+        Dim signMask = &H8000000000000000UL
+
+        Dim sign = CInt(CULng(value) And signMask) >> 63
+
+        Dim integral As Integer = value
+        Dim fractional = value - integral
+        If fractional >= 0.5 Then
+            integral += 1
+        End If
+        Return integral - sign
+    End Function
+
+
 
 
 
