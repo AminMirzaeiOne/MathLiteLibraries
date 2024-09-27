@@ -420,6 +420,20 @@
         Return x - y * quotient
     End Function
 
+    Public Function Log(x As Double, Optional terms As Double = 10) As Double
+        If x <= 0 Then
+            Throw New ArgumentException("x must be positive")
+        End If
+
+        Dim z = x - 1
+
+        Dim result As Double = 0
+        For i As Integer = 1 To terms
+            result += MathLite.Pow(-1, i + 1) * MathLite.Pow(z, i) / i
+        Next
+        Return result
+    End Function
+
 
 
 
