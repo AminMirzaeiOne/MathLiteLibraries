@@ -52,7 +52,7 @@
         Dim y As Double = x / 2
         Dim epsilon As Double = 0.000000000000001
 
-        While Math.Abs(y * y - x) > epsilon
+        While MathLite.Abs(y * y - x) > epsilon
             y = (y + x / y) / 2
         End While
 
@@ -96,6 +96,33 @@
         Return Math.Pow(number, 1.0 / n)
     End Function
 
+    Public Function Abs(ByVal value As Short) As Short
+        Return System.Convert.ToInt16(If(value < 0, -value, value))
+    End Function
+
+    Public Function Abs(ByVal value As Integer) As Integer
+        Return If(value < 0, -value, value)
+    End Function
+
+    Public Function Abs(ByVal value As Long) As Long
+        Return If(value < 0, -value, value)
+    End Function
+
+    Public Function Abs(ByVal value As Decimal) As Decimal
+        Return If(value < 0, -value, value)
+    End Function
+
+    Public Function Abs(ByVal value As Single) As Single
+        Return If(value < 0, -value, value)
+    End Function
+
+    Public Function Abs(ByVal value As Double) As Double
+        Return If(value < 0, -value, value)
+    End Function
+
+    Public Function Abs(ByVal value As SByte) As SByte
+        Return System.Convert.ToSByte(If(value < 0, -value, value))
+    End Function
 
 
 
