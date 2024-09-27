@@ -172,6 +172,56 @@ namespace MathLiteCs
             }
         }
 
+        public static double Pow(double baseNumber, double exponent)
+        {
+            double result = 1.0;
+            if (exponent >= 0)
+            {
+                for (int i = 0; i < exponent; i++)
+                {
+                    result *= baseNumber;
+                }
+            }
+            else
+            {
+                for (int i = 0; i > exponent; i--)
+                {
+                    result /= baseNumber;
+                }
+            }
+            return result;
+        }
+
+        public static double Pow(double baseNumber, double exponent,MathLiteCs.MathLite.PowerMethod method)
+        {
+            double get = 0;
+            if (method == PowerMethod.Loop)
+            {
+                get = MathLiteCs.MathLite.Pow(baseNumber, exponent);
+            }
+            else
+            {
+                if (exponent == 0)
+                {
+                    get = 1.0;
+                }
+                if (exponent < 0)
+                {
+                    get = 1.0 / MathLite.Pow(baseNumber, -exponent);
+                }
+                if (exponent % 2 == 0)
+                {
+                    double temp = MathLite.Pow(baseNumber, exponent / 2);
+                    get = temp * temp;
+                }
+                else
+                {
+                    get = baseNumber * MathLite.Pow(baseNumber, exponent - 1);
+                }
+            }
+            return get;
+        }
+
 
     }
 }
