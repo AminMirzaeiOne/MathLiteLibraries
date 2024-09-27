@@ -210,6 +210,22 @@
         Return result
     End Function
 
+    Public Function Sin(x As Double) As Double
+
+        Dim result = x
+        Dim term = x
+        Dim sign = -1
+        Dim i = 3
+
+        While MathLite.Abs(term) > 0.0000000001
+            term *= -x * x / ((i - 1) * i)
+            result += term
+            sign *= -1
+            i += 2
+        End While
+        Return result
+    End Function
+
 
 
 
