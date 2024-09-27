@@ -529,7 +529,6 @@ namespace MathLiteCs
             {
                 result += MathLite.Pow(-1, i + 1) * MathLite.Pow(z, i) / i;
             }
-
             return result;
         }
 
@@ -606,7 +605,7 @@ namespace MathLiteCs
             {
                 throw new System.ArgumentException("x must be positive");
             }
-
+            
             double z = x - 1;
             double result = 0;
             double term = z;
@@ -620,6 +619,7 @@ namespace MathLiteCs
 
             return result;
         }
+
 
 
 
