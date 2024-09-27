@@ -137,6 +137,16 @@
         Return integral - sign
     End Function
 
+    Public Function Ceiling(value As Double) As Long
+        Dim integralPart As Long = value
+        Dim fractionalPart = value - integralPart
+
+        If fractionalPart > 0 Then
+            Return integralPart + 1
+        Else
+            Return integralPart
+        End If
+    End Function
 
 
 
