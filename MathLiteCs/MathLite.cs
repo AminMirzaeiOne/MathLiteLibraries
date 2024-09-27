@@ -366,7 +366,24 @@ namespace MathLiteCs
             {
                 theta += 2 * MathLiteCs.Constants.PI;
             }
+            
             return theta;
+        }
+
+        public static int Sign(int number)
+        {
+            if (number > 0)
+            {
+                return 1;
+            }
+            else if (number < 0)
+            {
+                return -1;
+            }
+            else
+            {
+                return 0;
+            }
         }
 
 
