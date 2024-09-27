@@ -391,6 +391,13 @@ namespace MathLiteCs
             return MathLite.Sin(angle) / MathLite.Cos(angle);
         }
 
+        public static double Tanh(double x)
+        {
+            double exp_x = MathLite.Exp(x);
+            double exp_neg_x = MathLite.Exp(-x);
+            return (exp_x - exp_neg_x) / (exp_x + exp_neg_x);
+        }
+
 
 
 
