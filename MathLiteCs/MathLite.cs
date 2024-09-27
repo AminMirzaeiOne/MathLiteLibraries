@@ -251,6 +251,20 @@ namespace MathLiteCs
             return get;
         }
 
+        public static double Cos(double x)
+        {
+            double result = 1.0;
+            double term = 1.0;
+            int sign = -1;
+            for (int i = 2; MathLite.Abs(term) > 1e-10; i += 2)
+            {
+                term *= sign * x * x / (i * (i - 1));
+                sign = -sign;
+                result += term;
+            }
+            return result;
+        }
+
 
     }
 }
