@@ -533,6 +533,40 @@ namespace MathLiteCs
             return result;
         }
 
+        public static double Log(double x, double tolerance = 1e-10,bool NewtonRaphson = false)
+        {
+            double get = 0;
+            if (NewtonRaphson == false)
+            {
+                get = MathLite.Log(x, tolerance);
+            }
+            else
+            {
+                if (x <= 0)
+                {
+                    throw new System.ArgumentException("x must be positive");
+                }
+
+                double guess = 1.0;
+                while (true)
+                {
+                    double f = MathLite.Exp(guess) - x;
+                    double fPrime = MathLite.Exp(guess);
+                    double newGuess = guess - f / fPrime;
+
+                    if (MathLite.Abs(newGuess - guess) < tolerance)
+                    {
+                        get = newGuess;
+                    }
+
+                    guess = newGuess;
+                }
+            }
+
+            return get;
+            
+        }
+
 
 
     }
