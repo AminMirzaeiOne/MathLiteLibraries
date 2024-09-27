@@ -407,6 +407,7 @@ namespace MathLiteCs
 
         public static double Tanh(double x, int terms)
         {
+            
             double result = 0;
             double term = x;
             int sign = 1;
@@ -443,6 +444,18 @@ namespace MathLiteCs
             return (1 - t) * _tanhValues[index] + t * _tanhValues[index + 1];
         }
 
+
+        public static double Truncate(double number)
+        {
+            if (number >= 0)
+            {
+                return MathLite.Floor(number);
+            }
+            else
+            {
+                return MathLite.Ceiling(number);
+            }
+        }
 
 
 
