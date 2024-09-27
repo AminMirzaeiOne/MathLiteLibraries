@@ -127,7 +127,7 @@ namespace MathLiteCs
                 throw new System.ArgumentException("Cannot calculate even root of a negative number.");
             }
 
-            return Math.Pow(number, 1.0 / n);
+            return MathLite.Pow(number, 1.0 / n);
         }
 
         public static short Abs(short value)
