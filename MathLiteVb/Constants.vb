@@ -1,0 +1,3 @@
+﻿Structure Constants
+
+End Structure
