@@ -16,5 +16,6 @@ namespace MathLiteCs
         public const double Gravitational = 6.67430e-11;
         public const double Gas = 8.314462618;
         public const double Aperys = 1.202056903159594;
+        public const double GoldenRatio = 1.6180339887;
     }
 }
