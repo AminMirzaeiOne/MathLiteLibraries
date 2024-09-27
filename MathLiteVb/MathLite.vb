@@ -341,5 +341,17 @@
         Return result
     End Function
 
+    Public Sub TanhLookupTable(minX As Double, maxX As Double, numPoints As Integer)
+        MathLite._step = (maxX - minX) / (numPoints - 1)
+        MathLite._xValues = New Double(numPoints - 1) {}
+        MathLite._tanhValues = New Double(numPoints - 1) {}
+
+        For i = 0 To numPoints - 1
+            _xValues(i) = minX + i * _step
+            _tanhValues(i) = MathLite.Tanh(_xValues(i))
+        Next
+    End Sub
+
+
 
 End Module
