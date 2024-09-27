@@ -574,8 +574,53 @@ namespace MathLiteCs
                 throw new System.ArgumentException("x must be positive");
             }
 
-            return MathLite.Log(x,10) / MathLite.Log(10,10);
+            return MathLite.Log(x) / MathLite.Log(10);
         }
+
+        public static double Log10(double x, double tolerance = 1e-10)
+        {
+            if (x <= 0)
+            {
+                throw new System.ArgumentException("x must be positive");
+            }
+
+            double guess = 1.0;
+            while (true)
+            {
+                double f = MathLite.Pow(10, guess) - x;
+                double fPrime = MathLite.Pow(10, guess) * MathLite.Log(10);
+                double newGuess = guess - f / fPrime;
+
+                if (MathLite.Abs(newGuess - guess) < tolerance)
+                {
+                    return newGuess;
+                }
+
+                guess = newGuess;
+            }
+        }
+
+        public static double Log(double x)
+        {
+            if (x <= 0)
+            {
+                throw new System.ArgumentException("x must be positive");
+            }
+
+            double z = x - 1;
+            double result = 0;
+            double term = z;
+            int i = 1;
+
+            while (MathLite.Abs(term) > 1e-10)
+            {
+                result += term;
+                term *= -z / ++i;
+            }
+
+            return result;
+        }
+
 
 
 
