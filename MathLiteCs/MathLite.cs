@@ -117,5 +117,11 @@ namespace MathLiteCs
 
             return Math.Pow(number, 1.0 / n);
         }
+
+
+        public static long Abs(long value)
+        {
+            return value < 0 ? -value : value;
+        }
     }
 }
