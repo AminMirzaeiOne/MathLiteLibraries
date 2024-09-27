@@ -88,6 +88,13 @@
         Return result
     End Function
 
+    Public Function Root(ByVal number As Double, ByVal n As Double) As Double
+        If number < 0 AndAlso n Mod 2 = 0 Then
+            Throw New System.ArgumentException("Cannot calculate even root of a negative number.")
+        End If
+
+        Return Math.Pow(number, 1.0 / n)
+    End Function
 
 
 
