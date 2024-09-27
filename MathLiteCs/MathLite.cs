@@ -562,10 +562,21 @@ namespace MathLiteCs
                     guess = newGuess;
                 }
             }
-
+            
             return get;
             
         }
+
+        public static double Log10(double x)
+        {
+            if (x <= 0)
+            {
+                throw new System.ArgumentException("x must be positive");
+            }
+
+            return MathLite.Log(x,10) / MathLite.Log(10,10);
+        }
+
 
 
 
