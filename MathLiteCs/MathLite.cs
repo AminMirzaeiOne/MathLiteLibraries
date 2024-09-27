@@ -154,5 +154,17 @@ namespace MathLiteCs
                 return integralPart;
             }
         }
+
+        public static long Floor(double value)
+        {
+            if (value >= 0)
+            {
+                return (long)value;
+            }
+            else
+            {
+                return (long)value - 1;
+            }
+        }
     }
 }
