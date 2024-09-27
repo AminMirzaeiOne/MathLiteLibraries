@@ -149,6 +149,13 @@
     End Function
 
 
+    Public Function Floor(value As Double) As Long
+        If value >= 0 Then
+            Return value
+        Else
+            Return CLng(value) - 1
+        End If
+    End Function
 
 
 
