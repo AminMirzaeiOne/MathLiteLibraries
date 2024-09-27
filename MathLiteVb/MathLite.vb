@@ -290,6 +290,23 @@
         Return result
     End Function
 
+    Public Function Atan2(y As Double, x As Double) As Double
+        If x = 0 Then
+            If y > 0 Then Return MathLiteVb.Constants.PI / 2
+            If y < 0 Then Return -MathLiteVb.Constants.PI / 2
+            Return Double.NaN
+        End If
+
+        Dim theta As Double = MathLite.Atan(y / x)
+        If x < 0 Then
+            theta += MathLiteVb.Constants.PI
+        ElseIf y < 0 AndAlso x > 0 Then
+            theta += 2 * MathLiteVb.Constants.PI
+        End If
+
+        Return theta
+    End Function
+
 
 
 
