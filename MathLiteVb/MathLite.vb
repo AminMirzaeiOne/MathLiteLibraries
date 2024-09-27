@@ -396,6 +396,17 @@
     End Class
 
 
+    Public Function DivRem(dividend As Integer, divisor As Integer) As MathLiteVb.MathLite.DivisionResult
+
+        If divisor = 0 Then
+            Throw New DivideByZeroException()
+        End If
+
+        Return New MathLiteVb.MathLite.DivisionResult With {
+                .Quotient = dividend / divisor,
+                .Remainder = dividend Mod divisor
+            }
+    End Function
 
 
 
