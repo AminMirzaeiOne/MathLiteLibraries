@@ -371,6 +371,11 @@
         End If
     End Function
 
+    Public Function Sinh(x As Double) As Double
+        Dim exp_x As Double = MathLite.Exp(x)
+        Dim exp_neg_x As Double = MathLite.Exp(-x)
+        Return (exp_x - exp_neg_x) / 2
+    End Function
 
 
 
