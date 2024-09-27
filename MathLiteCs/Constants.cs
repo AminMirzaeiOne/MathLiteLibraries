@@ -13,5 +13,6 @@ namespace MathLiteCs
         public const double Avogadro = 6.02214076e23;
         public const double Planck = 6.62607015e-34;
         public const double SpeedOfLight = 299792458;
+        public const double Gravitational = 6.67430e-11;
     }
 }
