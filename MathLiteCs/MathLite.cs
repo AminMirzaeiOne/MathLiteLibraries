@@ -329,6 +329,23 @@ namespace MathLiteCs
                 result += term;
             }
             return result;
+            
+        }
+
+        public static long BigMul(int a, int b)
+        {
+            long result = 0;
+            int multiplier = 1;
+
+            while (b != 0)
+            {
+                int lastDigit = b % 10;
+                result += a * lastDigit * multiplier;
+                b /= 10;
+                multiplier *= 10;
+            }
+
+            return result;
         }
 
 
